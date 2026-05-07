@@ -10,7 +10,7 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.3-EE4C2C?style=flat&logo=pytorch)](https://pytorch.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-**Final Year B.E./B.Tech Computer Engineering Project — 2024**
+**Final Year B.Tech CSE Data Science Project — 2026*
 
 An end-to-end, AI-powered agricultural intelligence platform built for Indian farmers. Combines deep learning, real-time weather data, multilingual AI chatbot, and interactive crop mapping.
 

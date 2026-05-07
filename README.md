@@ -242,7 +242,7 @@ Open **http://localhost:3000** in your browser. 🎉
 
 ---
 
-### Step 4 — (Optional) Free API Keys
+### Step 4 — Free API Keys
 
 | Service | URL | Cost | Used For |
 |---|---|---|---|
@@ -254,25 +254,7 @@ Add keys to `backend/.env`.
 
 ---
 
-## 📡 API Reference
 
-| Method | Endpoint | Description | Auth |
-|---|---|---|---|
-| POST | `/api/auth/register` | Create account | — |
-| POST | `/api/auth/login` | Login + get JWT | — |
-| GET | `/api/auth/me` | Get profile | JWT |
-| POST | `/api/disease/predict` | Detect disease from image | Optional |
-| GET | `/api/disease/history` | Get scan history | JWT |
-| POST | `/api/fertilizer/recommend` | Get fertilizer advice | Optional |
-| GET | `/api/weather/crop-suggestions?lat=&lon=` | Weather + crop suggestions | — |
-| POST | `/api/chatbot/chat` | Chat with AgriBot | — |
-| GET | `/api/news/?category=` | Get agriculture news | — |
-| GET | `/api/market/products?disease=&crop=` | Get product recommendations | — |
-| GET | `/api/crop-map/states` | All states with crop data | — |
-| GET | `/api/crop-map/suggest?lat=&lng=` | Crops for your location | — |
-| GET | `/api/dashboard/stats` | Farmer analytics | JWT |
-
----
 
 ## 📸 Screenshots
 
@@ -288,15 +270,15 @@ Add keys to `backend/.env`.
 
 ---
 
-## 📅 Implementation Phases
+## Implementation Phases
 
-### ✅ Phase 1 — Core (Completed)
+### Phase 1 — Core (Completed)
 - Plant disease detection CNN (39 classes)
 - Fertilizer recommendation system
 - Flask REST API + SQLite database
 - Basic HTML/CSS frontend
 
-### ✅ Phase 2 — Advanced Features (This Version)
+### Phase 2 — Advanced Features (This Version)
 - React + Tailwind complete frontend redesign
 - JWT authentication system
 - Interactive crop map (Leaflet.js)
@@ -330,9 +312,9 @@ Add keys to `backend/.env`.
 
 ---
 
-## 🎓 Viva Preparation
+## Discription
 
-### Simple Description (for committee)
+### Simple Description 
 > "AgriVision AI is a web-based platform that uses artificial intelligence to help Indian farmers detect crop diseases from photos, get fertilizer recommendations, plan crops based on their location and weather, and get advice in their own language through a chatbot."
 
 ### Technical Description
@@ -340,7 +322,7 @@ Add keys to `backend/.env`.
 
 ### Why This Is a Mega Project
 1. **8 distinct AI/data features** integrated in one platform
-2. **Multilingual** — 10 Indian languages
+2. **Multilingual** — 8 Indian languages
 3. **Full-stack** — React frontend + Flask REST API
 4. **Real APIs** — Open-Meteo weather, Groq LLM, NewsAPI
 5. **Interactive map** — Leaflet.js with all 28 Indian states
@@ -348,47 +330,8 @@ Add keys to `backend/.env`.
 7. **Mobile responsive** — works on all screen sizes
 8. **Production-ready** — proper API design, error handling, env config
 
-### Possible Viva Questions & Answers
-
-**Q: What dataset did you use for disease detection?**
-> PlantVillage dataset — 87,000+ images across 39 classes covering 14 plant species.
-
-**Q: What is the accuracy of your model?**
-> The CNN achieves ~96.7% validation accuracy on the PlantVillage test split. In real-world conditions, accuracy is ~85-90% due to image quality variation.
-
-**Q: Why CNN and not ResNet or EfficientNet?**
-> Our custom 4-layer CNN was chosen for its simplicity and fast inference. ResNet-50 or EfficientNetV2-S are recommended upgrades that would improve accuracy by ~2-3% but require more compute. We've designed the system to swap models easily.
-
-**Q: How does the multilingual chatbot work?**
-> We use Groq's API which runs Llama-3-70B — a large language model capable of understanding and generating text in Indian languages. We provide it a system prompt defining its role as an agricultural assistant. A rule-based fallback handles cases when the API is unavailable.
-
-**Q: How does the map-based crop suggestion work?**
-> The frontend uses React-Leaflet for the interactive map. When a user clicks their location, we send lat/lng to `/api/crop-map/suggest`, which finds the nearest Indian state centroid using Euclidean distance, then returns the state's crop data from our curated database.
-
-**Q: How is user data secured?**
-> Passwords are hashed using bcrypt. API endpoints are protected with JWT (JSON Web Tokens) using Flask-JWT-Extended. Tokens expire after 24 hours.
-
-**Q: What is the difference between Kharif and Rabi crops?**
-> Kharif crops are sown in June-July with monsoon onset and harvested in October (rice, maize, cotton). Rabi crops are sown in October-November and harvested in March-April (wheat, mustard, chickpea).
-
-**Q: How would you scale this for production?**
-> Replace SQLite with PostgreSQL, use Redis for caching, containerize with Docker, deploy on AWS EC2 or GCP App Engine, use Nginx as reverse proxy, and implement CDN for static assets.
-
 ---
 
-## 👤 Author
-
-- Shubham Suresh Gunde
-- Department of Computer Engineering(Data Science)
-- KIT, Kolhapur
-
----
-
-## 📄 License
-
-MIT License — free to use for educational purposes.
-
----
 
 <div align="center">
 ⭐ If this project helped you, please give it a star on GitHub!

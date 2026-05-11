@@ -175,7 +175,7 @@ AgriVisionAI-Mega/
 ### Step 1 — Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/AgriVisionAI-Mega.git
+git clone https://github.com/ajinkyamane103/AgriVisionAI-Mega.git
 cd AgriVisionAI-Mega
 ```
 
